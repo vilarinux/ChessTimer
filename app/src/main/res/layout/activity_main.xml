@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/statusButton"
+        android:layout_width="116dp"
+        android:layout_height="45dp"
+        android:text="@string/statusButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/incInput"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.501" />
+
+    <EditText
+        android:id="@+id/minutesInput"
+        android:layout_width="116dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:hint="@string/minutesInput"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/incInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/incInput"
+        android:layout_width="116dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:hint="@string/incInput"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/statusPlayer1"
+        android:layout_width="413dp"
+        android:layout_height="109dp"
+        android:text="@string/statusPlayer1"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/statusPlayer2"
+        android:layout_width="414dp"
+        android:layout_height="109dp"
+        android:rotation="180"
+        android:text="@string/statusPlayer2"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Chronometer
+        android:id="@+id/view_timer2"
+        android:layout_width="248dp"
+        android:layout_height="136dp"
+        android:layout_marginBottom="48dp"
+        android:gravity="center"
+        android:rotation="180"
+        android:textSize="54sp"
+        app:layout_constraintBottom_toTopOf="@+id/incInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusPlayer2"
+        tools:targetApi="24" />
+
+    <Chronometer
+        android:id="@+id/view_timer1"
+        android:layout_width="254dp"
+        android:layout_height="124dp"
+        android:gravity="center"
+        android:textSize="54sp"
+        app:layout_constraintBottom_toTopOf="@+id/statusPlayer1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/incInput"
+        tools:targetApi="24" />
+</androidx.constraintlayout.widget.ConstraintLayout>

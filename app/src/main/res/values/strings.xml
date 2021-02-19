@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Chess Timer</string>
+    <string name="statusButton">Start</string>
+    <string name="statusButtonReset">Stop</string>
+    <string name="minutesInput">Minutes</string>
+    <string name="incInput">Increment (s)</string>
+    <string name="statusPlayer1">Wait</string>
+    <string name="statusPlayer2">Wait</string>
+</resources>
