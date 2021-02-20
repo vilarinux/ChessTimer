@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.SystemClock
 import android.widget.Button
 import android.widget.Chronometer
+import android.widget.EditText
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -28,9 +29,8 @@ class MainActivity : AppCompatActivity() {
         val STATUSES = listOf(getString(R.string.statusButton),getString(R.string.statusButtonReset))
 
         statusButton.setOnClickListener() {
-            val inputMinutes:Long = (findViewById<TextView>(R.id.minutesInput)).toString().toLong()*SECONDS*MILIS
-//            var inputMinutes:Long = SECONDS*MILIS + EXTRA_TIME
-//            var inputInc     = (findViewById<TextView>(R.id.incInput).toString().toLong())*MILIS
+            val inputMinutes:Long= (findViewById<EditText>(R.id.minutesInput).text.toString()).toLong() * SECONDS * MILIS + EXTRA_TIME
+            val inputInc:Long= (findViewById<EditText>(R.id.incInput).text.toString()).toLong() * MILIS + EXTRA_TIME
 
             if (statusButton.text.equals(STATUSES[0])) {
                 // start
@@ -41,9 +41,11 @@ class MainActivity : AppCompatActivity() {
                     it.timer.base = SystemClock.elapsedRealtime() + inputMinutes
                 }
 
-                var match = Match(players)
+                var match = Match(players, inputInc)
                 players[WHITES].button.setText(R.string.played)
+                players[WHITES].isPlaying = true
                 players[WHITES].timer.start()
+                players[WHITES].timer.base += inputInc
 
                 match.timeDifference = SystemClock.elapsedRealtime()
 
