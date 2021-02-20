@@ -4,6 +4,6 @@
     <string name="statusButtonReset">Stop</string>
     <string name="minutesInput">Minutes</string>
     <string name="incInput">Increment (s)</string>
-    <string name="statusPlayer1">Wait</string>
-    <string name="statusPlayer2">Wait</string>
+    <string name="wait">Wait</string>
+    <string name="played">Played</string>
 </resources>
